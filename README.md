@@ -6,7 +6,7 @@ A modern Pomodoro Timer built with React for the FreeCodeCamp Front End Developm
 
 ## 🔗 Live Demo
 
-https://fcc-25-5-clock.vercel.app/
+fcc-25-5-clock-hazel.vercel.app
 
 ---
 
