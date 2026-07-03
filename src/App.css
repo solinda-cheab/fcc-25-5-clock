@@ -1,0 +1,184 @@
+/* --- Global Body Setup --- */
+body {
+  background: white;
+  color: #f8fafc;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* --- App Container Shell --- */
+.app {
+  color: #000000;
+  width: min(100%, 420px);
+  background: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.04);
+  border-radius: 24px;
+  padding: 28px;
+  text-align: center;
+  box-shadow: 
+    0 4px 6px -1px rgba(0, 0, 0, 0.4),
+    0 25px 50px -12px rgba(0, 0, 0, 0.6),
+    inset 0 1px 0px rgba(255, 255, 255, 0.05);
+}
+
+/* --- Settings / Controls Row --- */
+.controls {
+  display: flex;
+  justify-content: space-between;
+  gap: 16px;
+  margin-bottom: 24px;
+}
+
+/* --- Break & Session Control Boxes --- */
+.box {
+  flex: 1;
+  background: linear-gradient(180deg, #1e222b 0%, #15181f 100%);
+  border: 1px solid #2a2f3b;
+  padding: 16px 12px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  
+  /* Text styling for labels inside boxes */
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Values/Numbers inside the boxes */
+.box span, .box h2 {
+  margin: 0;
+  color: #f1f5f9;
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: 'Courier New', monospace;
+}
+
+/* --- Modular Micro Buttons (+ / -) --- */
+.box button {
+  margin: 0 4px;
+  padding: 6px 14px;
+  font-size: 1.1rem;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  background: #2e3545;
+  color: #cbd5e1;
+  cursor: pointer;
+  box-shadow: 0 2px 0px #1a1e26;
+  transition: all 0.1s ease;
+}
+
+.box button:hover {
+  background: #131f34;
+  color: white;
+  box-shadow: 0 2px 0px #0b1123;
+}
+
+.box button:active {
+  transform: translateY(2px);
+  box-shadow: 0 0px 0px transparent;
+}
+
+/* --- THE TIMER PANEL DISPLAY --- */
+.timer {
+  margin: 24px 0;
+  padding: 32px 20px;
+  background: #07090c;
+  border: 2px solid #1e293b;
+  border-radius: 20px;
+  box-shadow: 
+    inset 0 4px 12px rgba(0, 0, 0, 0.8),
+    0 0 20px rgba(59, 130, 246, 0.05);
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft glowing pulse animation vibe */
+.timer::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, #3b82f6, transparent);
+}
+
+/* Time text label (e.g., "Session" or "Break") */
+#timer-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.2em;
+  color: #64748b;
+  margin-bottom: 8px;
+  font-weight: 700;
+}
+
+/* Large Clock Face */
+#time-left {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 56px;
+  font-weight: 700;
+  color: #5052d1; /* Electric emerald green active state */
+  letter-spacing: -0.02em;
+  text-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+}
+
+/* --- PRIMARY MEDIA BUTTONS (Start, Stop, Reset) --- */
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.buttons button {
+  margin: 0;
+  padding: 12px 24px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Start / Pause Key */
+#start_stop {
+  background: linear-gradient(180deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  box-shadow: 
+    0 4px 0px #1e40af,
+    0 6px 12px rgba(29, 78, 216, 0.3);
+}
+
+#start_stop:hover {
+  background: linear-gradient(180deg, #60a5fa 0%, #2563eb 100%);
+}
+
+/* Reset Key */
+#reset {
+  background: red;
+  color: #ffffff;
+  border: 1px solid #4b5563;
+  box-shadow: 0 4px 0px #111827;
+}
+
+#reset:hover {
+  color: white;
+  background: linear-gradient(180deg, #4b5563 0%, #374151 100%);
+}
+
+/* Mechanical Push Effects */
+.buttons button:active {
+  transform: translateY(4px);
+  box-shadow: 0 0px 0px transparent;
+}
